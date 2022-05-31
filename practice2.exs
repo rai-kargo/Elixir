@@ -57,3 +57,10 @@ result = Enum.reduce(list, %{
         end
 )
 IO.inspect result
+
+
+
+keyword = IO.gets("search: ")
+keyword = String.replace(keyword,"\n", "")
+
+IO.inspect Enum.find_index(list, fn x -> x == keyword end)
